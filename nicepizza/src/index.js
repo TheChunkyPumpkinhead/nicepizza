@@ -49,13 +49,18 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1>Hello World !!</h1>
+      <Header />
       <Pizza />
       <Pizza />
       <Pizza />
     </div>
   );
 }
+function Header() {
+  return <h1>Za Time</h1>;
+}
+function Menu() {}
+function Footer() {}
 
 function Pizza() {
   return (
