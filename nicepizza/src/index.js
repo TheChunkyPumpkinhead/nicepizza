@@ -50,8 +50,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Pizza />
-      <Pizza />
+      <Menu />
       <Footer />
     </div>
   );
@@ -59,9 +58,22 @@ function App() {
 function Header() {
   return <h1>Za Time</h1>;
 }
-function Menu() {}
+
+function Menu() {
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </div>
+  );
+}
+
 function Footer() {
-  return <footer>{new Date().toLocaleTimeString()}We're currently open</footer>;
+  return (
+    <footer>{new Date().toLocaleTimeString()}, We're currently open</footer>
+  );
 }
 
 function Pizza() {
