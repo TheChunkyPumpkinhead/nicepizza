@@ -49,7 +49,7 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -57,18 +57,22 @@ function App() {
   );
 }
 function Header() {
-  const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
-  return <h1 style={style}>Za Time</h1>;
+  const style = {};
+  return (
+    <header className="header">
+      <h1 style={style}>Za Time</h1>
+    </header>
+  );
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
-    </div>
+    </main>
   );
 }
 
@@ -78,8 +82,11 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
+
   return (
-    <footer>{new Date().toLocaleTimeString()}, We're currently open</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()}, We're currently open
+    </footer>
   );
 }
 
@@ -87,7 +94,7 @@ function Pizza() {
   return (
     <div>
       <img src="pizzas/focaccia.jpg" alt="Pizza focaccia" />
-      <h2>Focaccia</h2>
+      <h3>Focaccia</h3>
       <p>Bread with italian olive oil and rosemary</p>
     </div>
   );
